@@ -17,3 +17,13 @@
 p{
   margin: 33px;
 }
+
+td{
+    padding-bottom:7px;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+.form{
+    display:list-item;
+}

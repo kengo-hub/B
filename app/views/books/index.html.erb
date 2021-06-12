@@ -1,4 +1,4 @@
-<1>Books</1>
+<h1>Books</h1>
 <table>
   <thead>
     <tr>
@@ -7,21 +7,15 @@
       <th colspan="3"></th>
     </tr>
   </thead>
+  <% @books.each do |book| %>
   <tbody>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><%= link_to book.title, book_path(book) %></td>
+      <td><%= link_to book.body, book_path(book) %></td>
+      <td>show</td>
+      <td>edit</td>
+      <td>destroy</td>
     </tr>
   </tbody>
+  <% end 
 </table>
-<h2>New book</h2>
-<%= form_with model:, local:true do |f| %>
-<h4>Title</h4>
-<%= f.text_field :title %>
-<h4>Body</h4>
-<%= f.text_area :body %>
-<%= f.submit 'Create Book' %>
-<% end %>

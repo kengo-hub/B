@@ -27,3 +27,6 @@ td{
 .form{
     display:list-item;
 }
+.notice{
+    color: green;
+}
